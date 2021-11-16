@@ -1,0 +1,21 @@
+---
+title: "Untitled"
+author: "Nathan Liu"
+date: "11/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library("xlsx")
+data <- read.xlsx("C:/Users/nl628/Documents/UC Davis General/Calorie Project/CalorieData.xlsx", 1)
+head(data)
+plot(data$Calories, data$Protein)
+hist(data$Calories)
+boxplot(data$Calories)
+qqnorm(data$Calories)
+```
+
